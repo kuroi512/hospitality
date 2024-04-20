@@ -1,0 +1,23 @@
+{
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "files.autoSave": "onFocusChange",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "prettier.configPath": ".prettierrc",
+  "[php]": {
+      "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[tailwindcss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

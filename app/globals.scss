@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    @apply m-0;
+  }
+  body {
+    background-color: #282828;
+  }
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  /* Remove autocomplete background color */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 0 white inset !important;
+  }
+}
+
+@layer components {
+  .text {
+    background: linear-gradient(96.26deg, #fefaf4 8.68%, #f3cf8e 77.17%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .button {
+    background: linear-gradient(
+      101.3deg,
+      #e54900 -3.7%,
+      #00072e 53.66%,
+      #00adbb 98%
+    );
+    &:hover {
+      border-radius: 0px;
+      @apply scale-110 transform transition-all duration-700 ease-in-out;
+    }
+  }
+  .softonus {
+    @apply -ml-0.5 px-0.5;
+  }
+  .softonus:hover {
+    box-shadow: inset 110px 0 0 0 #582d88;
+    color: white;
+    transition:
+      color 0.5s ease-in-out,
+      box-shadow 0.5s ease-in-out;
+  }
+  .border-button {
+    border-image: linear-gradient(
+        101.3deg,
+        #e54900 -3.7%,
+        #00072e 53.66%,
+        #00adbb 98%
+      )
+      1;
+    border-width: 3px;
+    border-style: solid;
+    &:hover {
+      border-radius: 0px;
+      @apply scale-110 transform;
+    }
+  }
+  .border-card {
+    transition: border-image 1s ease;
+    border-image: linear-gradient(
+        101.3deg,
+        #e54900 -3.7%,
+        #00072e 53.66%,
+        #00adbb 98%
+      )
+      1;
+    margin-top: -1px;
+    border-width: 1px;
+    border-style: solid;
+    border-image-slice: 1 1 1 1;
+  }
+
+  .container {
+    padding: 0px;
+    margin: 0 auto;
+  }
+
+  .slider-controler {
+    margin-top: 40px;
+    position: relative;
+    z-index: 50;
+    height: 56px;
+    display: flex;
+    align-items: center;
+  }
+
+  .slider-controler .slider-arrow {
+    width: 44px;
+    height: 44px;
+    color: gray;
+  }
+  .slider-controler .slider-arrow:hover {
+    color: #e54900;
+  }
+
+  .slider-controler .slider-arrow::after {
+    content: '';
+  }
+  .blog-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    place-items: center;
+    grid-gap: 1rem;
+  }
+  .content-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    place-items: center;
+    grid-gap: 1rem;
+  }
+  .footer {
+    columns: auto 8rem;
+  }
+  .navbar-button {
+    color: gray;
+    scale: 1.1;
+    transition: all 0.1s ease-in;
+  }
+  .remove-shadow .swiper-slide-shadow-left,
+  .remove-shadow .swiper-slide-shadow-right {
+    @apply hidden;
+  }
+  .remove-shadow.swiper-slide-prev,
+  .remove-shadow.swiper-slide-active,
+  .remove-shadow.swiper-slide-next {
+    @apply rounded-xl p-3;
+  }
+  .gradient-black {
+    border-radius: 1rem;
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+  }
+}
+
+/* Target the scrollbar track start */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    101.3deg,
+    #e54900 -3.7%,
+    #00072e 53.66%,
+    #00adbb 98%
+  );
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    101.3deg,
+    #e54900 -3.7%,
+    #00072e 53.66%,
+    #00adbb 98%
+  );
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-button:start:decrement {
+  display: none;
+}
+
+::-webkit-scrollbar-button:end:increment {
+  display: none;
+}
+/* Target the scrollbar track ends */

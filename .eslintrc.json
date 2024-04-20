@@ -1,0 +1,17 @@
+{
+  "extends": ["next", "prettier", "airbnb-base", "airbnb/hooks"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "semi": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  }
+}
